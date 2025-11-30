@@ -1,0 +1,361 @@
+/* Reset básico - Estética Deep Web */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace; /* Tipografía monoespaciada */
+    background-color: #0d0d0d; /* Fondo casi negro */
+    color: #bfbfbf; /* Texto gris claro, no blanco puro */
+    font-size: 13px; /* Un poco más pequeño, estilo terminal */
+    line-height: 1.5;
+}
+
+/* Header - Cabecera Simple y Clandestina */
+.wiki-header {
+    background-color: #141414;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333; /* Bordes sutiles */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.wiki-logo-icon {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #00ff41; /* Verde hacker/terminal */
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+.wiki-logo-text h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.wiki-logo-text small {
+    font-size: 10px;
+    color: #666;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Buscador estilo input de consola */
+.search-box {
+    display: flex;
+    border: 1px solid #444;
+}
+
+.search-box input {
+    padding: 5px;
+    background-color: #000;
+    border: none;
+    color: #00ff41;
+    font-family: monospace;
+    width: 200px;
+}
+
+.search-box input:focus {
+    outline: none;
+    background-color: #111;
+}
+
+.search-box button {
+    padding: 5px 12px;
+    border: none;
+    border-left: 1px solid #444;
+    background-color: #222;
+    color: #888;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.search-box button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Layout Principal */
+.main-container {
+    display: flex;
+    max-width: 1000px; /* Más estrecho, old web feel */
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* Sidebar - Panel Oculto */
+.wiki-sidebar {
+    width: 200px;
+    padding: 15px;
+    font-size: 12px;
+    flex-shrink: 0;
+    background-color: #111;
+    border: 1px solid #2a2a2a;
+    margin-right: 20px;
+    height: fit-content;
+}
+
+.wiki-sidebar ul {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    border-bottom: 1px dashed #333;
+}
+
+.wiki-sidebar ul:last-child {
+    border-bottom: none;
+}
+
+.sidebar-header {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 8px;
+    cursor: default;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wiki-sidebar li a {
+    color: #888;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    transition: all 0.2s;
+}
+
+.wiki-sidebar li a:hover {
+    color: #ddd;
+    padding-left: 5px;
+    background-color: #1a1a1a;
+}
+
+/* Contenido Principal - Crudo y Escrow */
+.wiki-content {
+    background-color: #161616;
+    border: 1px solid #333;
+    padding: 40px;
+    flex-grow: 1;
+    min-height: 80vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.page-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.2em;
+    border-bottom: 2px solid #333;
+    margin-bottom: 0.2em;
+    padding-bottom: 0.2em;
+    font-weight: normal;
+    color: #e0e0e0;
+}
+
+.site-sub {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 2.5em;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.content-body p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Caja de introducción estilo "Mensaje encriptado" */
+.intro-box {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #0f0f0f;
+    border: 1px dashed #444;
+    color: #999;
+}
+
+.intro-box strong {
+    color: #ccc;
+}
+
+/* Tabla de Contenidos - Minimalista */
+.toc-container {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    display: inline-block;
+    padding: 15px 30px 15px 15px;
+    margin-bottom: 30px;
+}
+
+.toc-title {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #666;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.toc-container ul {
+    list-style: none;
+}
+
+.toc-container li {
+    margin-bottom: 4px;
+}
+
+.toc-container a {
+    color: #00ff41; /* Verde enlace */
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.toc-container a:hover {
+    text-decoration: underline;
+}
+
+/* Encabezados de Sección */
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    border-bottom: 1px solid #333;
+    padding-top: 1.5em;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+    font-weight: normal;
+    margin-top: 20px;
+    color: #d4d4d4;
+}
+
+hr {
+    display: none; /* Ocultar HRs estándar, usar bordes de H2 */
+}
+
+/* Listas y Enlaces del cuerpo */
+.content-body ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.content-body li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #4db8ff; /* Azul apagado para enlaces en texto */
+    text-decoration: none;
+}
+
+.content-body a {
+    color: #00ff41; /* Verde terminal para enlaces importantes */
+    border-bottom: 1px dotted #00ff41;
+}
+
+.content-body a:hover {
+    background-color: #001a05;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #008f24;
+}
+
+/* Footer */
+.wiki-footer {
+    background-color: #0d0d0d;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    font-size: 10px;
+    color: #444;
+    text-align: center;
+    font-family: monospace;
+}
+
+.wiki-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.wiki-footer a {
+    color: #555;
+    border: none;
+}
+
+.wiki-footer a:hover {
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    /* Header: Columna centrada */
+    .wiki-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%; /* El input ocupa todo el ancho disponible */
+    }
+
+    /* Layout: Columna única */
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Sidebar: Arriba del contenido, ancho completo */
+    .wiki-sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Pequeño ajuste para listas laterales en móvil */
+    .wiki-sidebar ul {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Contenido: Menos padding para ganar espacio */
+    .wiki-content {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+}
